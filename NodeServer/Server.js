@@ -6,7 +6,9 @@ let server = http.createServer(function (req,res) {
         res.end("This is Home Page")
 
     } else if (req.url === "/about"){
-        res.end("This is About page")
+
+        res.write("<h1>\"This is About page\"</h1>");
+        res.end();
     }
 })
 
